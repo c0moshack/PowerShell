@@ -1,20 +1,22 @@
-#$rootDriveLIT = "D:\Programming\PowerShell"
-#$rootDriveUNC = "\\NGWIWK-DISC4-47\D$\Programming\Powershell"
-#
-#If ($env:COMPUTERNAME -eq "NGWINB-DISC4-47") {
-#    $rootDrive = $rootDriveUNC
-#} ElseIf ($env:COMPUTERNAME -eq "NGWIWK-DISC4-47") {
-#    $rootDrive = $rootDriveLIT
-#}
-#
-#Set-Location $rootDrive
-##Restore-MDTPersistentDrive -ErrorAction SilentlyContinue | Out-Null
-#New-PSDrive -Name Scripts -PSProvider FileSystem -Root $rootDrive
-#
-#$ScriptsRoot = ";$rootDrive"
-#if(($env:Path -split ';') -notcontains $ScriptsRoot) {
-#    $env:Path += $ScriptsRoot
-#}
+$rootDriveLIT = "D:\Programming\PowerShell"
+$rootDriveUNC = "\\NGWIWK-DISC4-47\D$\Programming\Powershell"
+
+If ($env:COMPUTERNAME -eq "NGWINB-DISC4-47") {
+    $rootDrive = $rootDriveUNC
+} ElseIf ($env:COMPUTERNAME -eq "NGWIWK-DISC4-47") {
+    $rootDrive = $rootDriveLIT
+} Else {
+    $rootDrive = "C:\Users\admin\Documents\GitHub\PowerShell"
+}
+
+Set-Location $rootDrive
+#Restore-MDTPersistentDrive -ErrorAction SilentlyContinue | Out-Null
+New-PSDrive -Name Scripts -PSProvider FileSystem -Root $rootDrive
+
+$ScriptsRoot = ";$rootDrive"
+if(($env:Path -split ';') -notcontains $ScriptsRoot) {
+    $env:Path += $ScriptsRoot
+}
 
 # Load all scripts
 Get-ChildItem (Join-Path ('Scripts:') \LoadedScripts\) | Where `
