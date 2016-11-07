@@ -1,0 +1,1 @@
+﻿dir | Select-Object @{Name='KB'; Expression={'{0:0.0} KB' -f ($_.Length/1KB)}}, Name, Length
