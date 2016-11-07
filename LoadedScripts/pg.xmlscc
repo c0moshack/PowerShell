@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Set-WindowsStore.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-MyProfile.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-NTUSERDAT.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Set-ElevatedPrompt.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-Netstat.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-DecodeMRU.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Add-Objects.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-JulianDate.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|Windows Live ID\paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Move-Pictures.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-Metadata.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Set-J6DisableCACOnly.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|Windows Live ID\paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-DellWarranty.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-J6RecreateComputer.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Add-On_CustomMenu.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|paulbrown4@gmail.com</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-Weather.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-PendingReboot.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Set-RegistryValue.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Documents\J6\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Documents\J6\Programming\Powershell\LoadedScripts\Get-Proxy.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-DriveSpaceAnalysis.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-ShortName.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Add-Objects.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Add-On_CustomMenu.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-DellWarranty.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-J6RecreateComputer.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-JulianDate.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-Metadata.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-MyProfile.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-NTUSERDAT.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-PendingReboot.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-Proxy.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Move-Pictures.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Set-ElevatedPrompt.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Set-J6DisableCACOnly.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Set-WindowsStore.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-MemeryStatus.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-Weather.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Enable-ClientPSRemoting.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-MemoryStatus.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-Coordinates.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-DirectorySize.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-DecodeMRU.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-LocalGroup.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName />
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-SCCMClientPreCheck.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser />
+    <sProjectName />
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath />
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-SoftwareSearch.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-Netstat.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Get-NSLookup.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell/LoadedScripts</sProjectName>
+    <sFolder>D:\Programming\Powershell\LoadedScripts</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Start-WinProcess.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+  <FileProjectInfo>
+    <sUser>paulbrown4@gmail.com</sUser>
+    <sProjectName>$/PowerShell</sProjectName>
+    <sFolder>D:\Programming\Powershell</sFolder>
+    <sDbPath>https://paulbrown4.visualstudio.com/defaultcollection|NGWIWK-DISC4-47|ad90e90d-f5ec-4156-bdab-470032b11240</sDbPath>
+    <FileName>D:\Programming\Powershell\LoadedScripts\Set-RegistryValue.ps1</FileName>
+    <IsStatusKnown>true</IsStatusKnown>
+    <ProviderName>Team Foundation Server MSSCCI Provider</ProviderName>
+  </FileProjectInfo>
+</ArrayOfFileProjectInfo>
