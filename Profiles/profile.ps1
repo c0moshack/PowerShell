@@ -58,7 +58,7 @@ Function <NAME> {
 	    .Parameter  
 	    	The parameter 
 	    .Notes 
-	    	NAME: $($PGSE.CurrentDocumentWindow.Title) 
+	    	NAME: $($psise.CurrentFile.DisplayName) 
 	    	AUTHOR: $env:username 
 	    	LASTEDIT: $(Get-Date) 
 	    	KEYWORDS: 
@@ -79,8 +79,24 @@ Function <NAME> {
 }
 "@
 	Add-HeaderToScript
-	$PGSE.CurrentDocumentWindow.Document.Insert($newfunction, 10, 1)
+	#$PGSE.CurrentDocumentWindow.Document.Insert($newfunction, 10, 1)
+     # Uncomment for PowerShell ISE Environment
+    $psise.CurrentFile.Editor.InsertText($newfunction) 
 }
+
+Function Add-Parameter
+{ 
+ $paramText = @" 
+        [Parameter(
+		Mandatory=`$true)]
+		[array]`$Keywords,
+"@ 
+ #$line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
+ #$char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
+ #$PGSE.CurrentDocumentWindow.Document.Insert($helpText, $line, $char)
+ # Uncomment for PowerShell ISE Environment
+ $psise.CurrentFile.Editor.InsertText($paramText) 
+} #end function add-help
 
 Function Add-HeaderToScript 
 { 
@@ -105,7 +121,7 @@ Function Add-HeaderToScript
  #> 
  $header = @" 
 # ----------------------------------------------------------------------------- 
-# Script: $($PGSE.CurrentDocumentWindow.Title)
+# Script: $($psise.CurrentFile.DisplayName)
 # Author: Paul Brown
 # Date: $(Get-Date) 
 # Keywords: 
@@ -114,9 +130,10 @@ Function Add-HeaderToScript
 # -----------------------------------------------------------------------------
 `r`n 
 "@ 
- $PGSE.CurrentDocumentWindow.Document.Insert($header, 1, 1)
+ #$PGSE.CurrentDocumentWindow.Document.Insert($header, 1, 1)
  # Uncomment for PowerShell ISE Environment
- #$psise.CurrentFile.Editor.InsertText($header) 
+ $psise.CurrentFile.Editor.SetCaretPosition(1,1)
+ $psise.CurrentFile.Editor.InsertText($header) 
 } #end function add-headertoscript
 
 Function Add-Help 
@@ -130,7 +147,7 @@ Function Add-Help
    `t.Parameter  
     `tThe parameter 
    `t.Notes 
-    `tNAME: $($PGSE.CurrentDocumentWindow.Title) 
+    `tNAME: $($psise.CurrentFile.DisplayName) 
     `tAUTHOR: $env:username 
     `tLASTEDIT: $(Get-Date) 
     `tKEYWORDS: 
@@ -139,11 +156,11 @@ Function Add-Help
 `t#Requires -Version 2.0 
 `t#> 
 "@ 
- $line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
- $char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
- $PGSE.CurrentDocumentWindow.Document.Insert($helpText, $line, $char)
+ #$line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
+ #$char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
+ #$PGSE.CurrentDocumentWindow.Document.Insert($helpText, $line, $char)
  # Uncomment for PowerShell ISE Environment
- #$psise.CurrentFile.Editor.InsertText($helpText) 
+ $psise.CurrentFile.Editor.InsertText($helpText) 
 } #end function add-help
 
 Function Add-CommentBlock {
@@ -153,9 +170,11 @@ $commentblock = @"
 ###############################################################################
 "@
 
-$line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
-$char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
-$PGSE.CurrentDocumentWindow.Document.Insert($commentblock, $line, $char)
+ #$line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
+ #$char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
+ #$PGSE.CurrentDocumentWindow.Document.Insert($commentblock, $line, $char)
+ # Uncomment for PowerShell ISE Environment
+ $psise.CurrentFile.Editor.InsertText($helpText) 
 }
 
 Function Speak-Text {
