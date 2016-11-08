@@ -88,8 +88,9 @@ Function Add-Parameter
 { 
  $paramText = @" 
         [Parameter(
-		Mandatory=`$true)]
-		[array]`$Keywords,
+		Mandatory=`$$(IF(($p1 = Read-Host "Is this variable mandatory? Enter true or false") -eq ''){"false"}else{$p1}))]
+		[$(IF(($p2 = Read-Host "Type: string,array,int") -eq ''){"string"}else{$p2})]`$$(IF(($p3 = Read-Host "Enter variable name:") -eq ''){"<VARiABLE>"}else{$p3}),
+`r`n
 "@ 
  #$line = $PGSE.CurrentDocumentWindow.Document.get_CaretLine()
  #$char = $PGSE.CurrentDocumentWindow.Document.get_CaretCharacter()
