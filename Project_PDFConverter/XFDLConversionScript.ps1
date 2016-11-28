@@ -50,7 +50,7 @@ Function Export-PDF {
 	
 	$outPath = $Path
 	$originalkeyvalue = $null
-    $logfile = "C:\PowerShellScripts\Logs\ConversionLog_$(Get-Date -Format 'HH-mm-ss-MM-dd-yy').log"
+    $logfile = "C:\PowerShellScripts\Logs\ConversionLog_$(Get-Date -Format 'MM-dd-yy').log"
 		
 	# Get default printer so it can be reset later
 	$defaultPrinter = Get-WmiObject -Class Win32_Printer | Where-Object {$_.Default -eq $true}

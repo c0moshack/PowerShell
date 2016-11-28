@@ -57,7 +57,7 @@ Function Set-RegistryKey {
 	)
 
 	$reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey($Hive, $ComputerName)
-	$subkey = $reg.OpenSubKey($Path)
+	$subkey = $reg.OpenSubKey($Path,$true)
 	$keyvalue = $subkey.GetValue($Name)
 	
 	If ($Set) {

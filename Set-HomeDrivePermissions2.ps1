@@ -7,7 +7,7 @@
 # 
 # -----------------------------------------------------------------------------
 
- Function Set-HomeDrivePermissions {
+ Function Set-HomeDrivePermissions2 {
 	<# 
 	    .Synopsis 
 	   		This does that  
