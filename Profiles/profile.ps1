@@ -66,16 +66,23 @@ Function <NAME> {
 	    	https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=PaulBrown4 
 	#Requires -Version 2.0 
 	#>
-	[cmdletbinding()]
+	[CmdletBinding()]
+    [OutputType([psobject})}
+    v
 	Param(
 		[Parameter(
 		Mandatory=`$true,
 		Position=0,
 		ValueFromPipeline=`$true,
 		ValueFromPipelineByPropertyName=`$true)]
-		[array]$<VARIABLE>
+		[string]$<VARIABLE>
 	)
+    begin {}
 	`r`n
+    process {}
+    `r`n
+    end {}
+    `r`n
 }
 "@
 	Add-HeaderToScript
