@@ -96,32 +96,52 @@
                     & TAKEOWN /F $INFPath
 
                     # Grant Users rights to the files (Everyone should be a user even if they have admin rights)
-                    $newACL = $SYSACL
-                    $newPermissions = $env:username, 'Read,Modify', 'Allow'
-                    $newRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
-                    $newACL.SetAccessRule($newRule)
-                    Set-Acl -Path $SYSPath -AclObject $newACL
+                    # Give users access
+                    $newUsersPermissions = 'BUILTIN/Users', 'ReadAndExecute,Synchronize', 'Allow'
+                    $newUsersRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
+                    # Give Administrators access
+                    $newAdminsPermissions = 'BUILTIN/Administrators', 'ReadAndExecute,Synchronize', 'Allow'
+                    $newAdminsRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
+                    
+                    $newSYSACL = $SYSACL
+                    $newSYSACL.SetAccessRule($newUsersRule)
+                    $newSYSACL.SetAccessRule($newAdminsRule)
+                    Set-Acl -Path $SYSPath -AclObject $newSYSACL
 
-                    $newACL = $PNFACL
-                    $newPermissions = $env:username, 'Read,Modify', 'Allow'
-                    $newRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
-                    $newACL.SetAccessRule($newRule)
-                    Set-Acl -Path $PNFPath -AclObject $newACL
+                    $newPNFACL = $PNFACL
+                    $newPNFACL.SetAccessRule($newUsersRule)
+                    $newPNFACL.SetAccessRule($newAdminsRule)
+                    Set-Acl -Path $PNFPath -AclObject $newPNFACL
 
-                    $newACL = $INFACL
-                    $newPermissions = $env:username, 'Read,Modify', 'Allow'
-                    $newRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
-                    $newACL.SetAccessRule($newRule)
-                    Set-Acl -Path $INFPath -AclObject $newACL
+                    $newINFACL = $INFACL
+                    $newINFACL.SetAccessRule($newUsersRule)
+                    $newINFACL.SetAccessRule($newAdminsRule)
+                    Set-Acl -Path $INFPath -AclObject $newINFACL
                 }
-            }
+            } # End Enable
 
             If ($Disable) {
                 # Restore the original file permissions
-                Set-Acl -Path $SYSPath -AclObject $SYSACL   
-                Set-Acl -Path $PNFPath -AclObject $PNFACL   
-                Set-Acl -Path $INFPath -AclObject $INFACL   
-            }
+                
+                #Define the accounts to set as owner
+                [System.Security.Principal.NTAccount]$TrustedInstaller = "NT SERVICE\TrustedInstaller"
+                [System.Security.Principal.NTAccount]$Administrators = "BUILTIN\Administrators"
+                
+                # Change file owners and remove permissions for Users and Administrators groups
+                $newSYSACL = $SYSACL
+                $newSYSACL.SetOwner($TrustedInstaller) 
+                Set-Acl -Path $SYSPath -AclObject $newSYSACL
+
+                $newPNFACL = $PNFACL
+                $newPNFACL.SetOwner($Administrators) 
+                Set-Acl -Path $PNFPath -AclObject $newPNFACL
+
+                $newINFACL = $INFACL
+                $newINFACL.SetOwner($TrustedInstaller) 
+                Set-Acl -Path $INFPath -AclObject $newINFACL
+
+  
+            } # End Disable
         }
         
     }
