@@ -27,7 +27,9 @@ $Date = (Get-Date).ToString('MM.dd.yyyy')
 
 $head = '<style> BODY{font-family:caibri; background-color:Aliceblue;} TABLE{border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;} TH{font-size:1.1em; border-width: 1px;padding: 2px;border-style: solid;border-color: black;background-color:PowderBlue} TD{border-width: 1px;padding: 2px;border-style: solid;border-color: black;background-color:white} </style>'
 
-$OutLevel1 = "E:\$CompName-$User-$Date-Level1.html"
+$loglocation = "$env:USERPROFILE\Desktop\LRUP"
+
+$OutLevel1 = "$loglocation\$CompName-$User-$Date-Level1.html"
 
 $TList = @(tasklist /V /FO CSV | ConvertFrom-Csv)
 
@@ -246,23 +248,23 @@ date | select DateTime | ConvertTo-html  -Body "<H2> Current Date and Time  </H2
 
 # Copying network connections
 
-netstat -naob > "E:\$CompName-$User-$Date-NetworkConnections.txt"
+netstat -naob > "$loglocation\$CompName-$User-$Date-NetworkConnections.txt"
 
 # Copying Hosts file
 
-gc $env:windir\system32\drivers\etc\hosts > "E:\$CompName-$User-$Date-HostsFile.txt"
+gc $env:windir\system32\drivers\etc\hosts > "$loglocation\$CompName-$User-$Date-HostsFile.txt"
 
 # Open Files
 
-openfiles /query > "E:\$CompName-$User-$Date-OpenFiles.txt"
+openfiles /query > "$loglocation\$CompName-$User-$Date-OpenFiles.txt"
 
 # Audit Policy
 
-auditpol /get /category:* | select-string 'No Auditing' -notmatch > "E:\$CompName-$User-$Date-AuditPolicy.txt"
+auditpol /get /category:* | select-string 'No Auditing' -notmatch > "$loglocation\$CompName-$User-$Date-AuditPolicy.txt"
 
 # Firewall Config
 
-netsh firewall show config > "E:\$CompName-$User-$Date-FirewallConfig.txt"
+netsh firewall show config > "$loglocation\$CompName-$User-$Date-FirewallConfig.txt"
 
 
 write-host ""

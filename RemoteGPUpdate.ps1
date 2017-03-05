@@ -1,6 +1,6 @@
 ﻿function Invoke-GPUpdate()
 {
-    param($ComputerName = "")
+    param($ComputerName = "NGWIWK-DISC4-47")
     $targetOSInfo = Get-WmiObject -ComputerName $ComputerName -Class Win32_OperatingSystem -ErrorAction SilentlyContinue
     
     If ($targetOSInfo -eq $null)

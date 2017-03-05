@@ -97,10 +97,10 @@
 
                     # Grant Users rights to the files (Everyone should be a user even if they have admin rights)
                     # Give users access
-                    $newUsersPermissions = 'BUILTIN/Users', 'ReadAndExecute,Synchronize', 'Allow'
+                    $newUsersPermissions = 'BUILTIN/Users', 'Read, Modify', 'Allow'
                     $newUsersRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
                     # Give Administrators access
-                    $newAdminsPermissions = 'BUILTIN/Administrators', 'ReadAndExecute,Synchronize', 'Allow'
+                    $newAdminsPermissions = 'BUILTIN/Administrators', 'Read, Modify', 'Allow'
                     $newAdminsRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $newPermissions
                     
                     $newSYSACL = $SYSACL
@@ -154,4 +154,4 @@
 
 }
 
-Get-USBStor -Enable
+Get-USBStor

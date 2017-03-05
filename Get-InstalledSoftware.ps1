@@ -1,5 +1,5 @@
 ﻿$array = @()
-$computername="NGWIWK-DISC4-47"
+$computername="NGWIWK-TEST-47"
 #$computername=$env:COMPUTERNAME
 
 #Define the variable to hold the location of Currently Installed Programs
@@ -44,4 +44,4 @@ foreach($key in $subkeys){
 
 
 
-$array | Where-Object { $_.DisplayName } | select ComputerName, DisplayName, DisplayVersion, Publisher | ft -auto
+$array | Where-Object { $_.DisplayName } | select ComputerName, DisplayName, DisplayVersion, Publisher | Out-GridView
