@@ -1,12 +1,12 @@
-$rootDriveLIT = "D:\Programming\PowerShell"
-$rootDriveUNC = "\\NGWIWK-DISC4-47\D$\Programming\Powershell"
+$rootDrive = "$env:USERPROFILE\Documents\GitHub\PowerShell"
 
-If ($env:COMPUTERNAME -eq "NGWINB-DISC4-47") {
-    $rootDrive = $rootDriveUNC
-} ElseIf ($env:COMPUTERNAME -eq "NGWIWK-DISC4-47") {
-    $rootDrive = $rootDriveLIT
-} Else {
-    $rootDrive = "C:\Users\admin\Documents\GitHub\PowerShell"
+# Create the links if not already there
+If (!(Get-Item "$env:USERPROFILE\Documents\WindowsPowerShell\profile.ps1")) {
+    New-Item -ItemType HardLink -Name "Modules" -Value "$env:USERPROFILE\Documents\WindowsPowerShell\Modules" -ErrorAction SilentlyContinue
+    New-Item -ItemType HardLink -Name "Microsoft.PowerShellISE_profile.ps1" -Value "$env:USERPROFILE\Documents\WindowsPowerShellMicrosoft.PowerShellISE_profile.ps1" -ErrorAction SilentlyContinue
+    New-Item -ItemType HardLink -Name "profile.ps1" -Value "$env:USERPROFILE\Documents\WindowsPowerShell\profile.ps1" -ErrorAction SilentlyContinue
+    # Reload the profile
+    & $profile
 }
 
 Set-Location $rootDrive
