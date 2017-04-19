@@ -31,7 +31,7 @@ Function Get-MemoryStatus {
 		Position=0,
 		ValueFromPipeline=$true,
 		ValueFromPipelineByPropertyName=$true)]
-		[array]$ComputerName
+		[string]$ComputerName
 	)
 	
 	$os = Get-WmiObject win32_OperatingSystem -ComputerName $ComputerName 
