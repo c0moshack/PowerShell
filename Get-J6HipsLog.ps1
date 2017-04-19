@@ -71,7 +71,7 @@ Function Get-J6HipsLog {
                 Copy-Item -Path "$FirewallLogPath" -Destination "$Destination\$($ComputerName)_HIPSLog_$(Get-Date -Format 'MMddyyyy-HHmm')"
                 #Compress-Archive -Path "$Path\*.log" -DestinationPath $OutFile
             } Else {
-                Write-Error " Unable to reach $Path"
+                Write-Error " Unable to reach $HIPSLogPath"
             }
         } Else {
             Write-Error "$ComputerName is not online"
