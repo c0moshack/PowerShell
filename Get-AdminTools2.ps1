@@ -1,4 +1,4 @@
-﻿#$global:creds = Get-Credential "<domain\username>"
+﻿$global:creds = Get-Credential "<domain\username>"
 Window -ShowInTaskbar -Content {
     Grid -Columns Auto,* -Rows Auto,* -Children {
 
@@ -32,7 +32,7 @@ Window -ShowInTaskbar -Content {
             TextBox -Name "hname" -Width 200
             Label "|" 
             Button "HIPS Log"  -On_Click {(Get-ChildControl "tb").Text = $(Get-Content -Path "\\$((Get-ChildControl 'hname').Text)\c$\ConfigMgrAdminUISetup.log") | Out-String}
-            Button "System Details"  -On_Click {(Get-ChildControl "tb").Text = $(Get-WMIObject Win32_ComputerSystem -Computer $((Get-ChildControl 'hname').Text)) | Out-String }
+            Button "System Details"  -On_Click {$COMPUTERNAME = (Get-ChildControl 'hname').Text; (Get-ChildControl "tb").Text = Start-Process powershell -Credential $global:creds -ArgumentList "-noprofile -command &{Start-Process powershell -ArgumentList 'Get-WMIObject -Class Win32_ComputerSystem -Computer $COMPUTERNAME -Verb runas'}" }
         }
         
         TextBox -Name "tb" -Row 1 -Column 1 -TextWrapping Wrap -HorizontalScrollBarVisibility Auto -VerticalScrollBarVisibility Auto -Text ""
