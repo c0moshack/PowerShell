@@ -27,7 +27,7 @@ $Date = (Get-Date).ToString('MM.dd.yyyy')
 
 $head = '<style> BODY{font-family:caibri; background-color:Aliceblue;} TABLE{border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;} TH{font-size:1.1em; border-width: 1px;padding: 2px;border-style: solid;border-color: black;background-color:PowderBlue} TD{border-width: 1px;padding: 2px;border-style: solid;border-color: black;background-color:white} </style>'
 
-$loglocation = "$env:USERPROFILE\Desktop\LRUP"
+$loglocation = "$env:USERPROFILE\Desktop\"
 
 $OutLevel1 = "$loglocation\$CompName-$User-$Date-Level1.html"
 
