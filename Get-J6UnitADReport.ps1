@@ -49,15 +49,19 @@
         Foreach ( $comp in $comps ) {
             $props = @{}
             $props.Name = $comp.Name
-            $props.Modified = $comp.Modified
+            $props.Created = $comp.Created
+            $props.LastLogon = $comp.LastLogonDate
+            $props.Info = $comp.info
             $props.CN = $comp.CanonicalName
-            $props.ExpirationDate = (Get-Date $comp.Modified).AddDays(45)
+            $props.OS = $comp.OperatingSystem
+            $props.Description = $comp.Description
+            $props.ExpirationDate = (Get-Date $comp.LastLogonDate).AddDays(45)
             If ( ($props.ExpirationDate) -le (Get-Date) ) {
                 $props.Expired = $true
             } Else {
                 $props.Expired = $false
             }
-            $props.Serial = $comp.serialNumber
+            $props.Serial = $comp.serialNumber[0]
 
             $to = New-Object -TypeName psobject -Property $props
 
