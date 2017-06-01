@@ -1,4 +1,4 @@
-﻿$ADComputerAssests = Get-ADComputer -Filter * -Property * -searchbase "OU=NGWI,OU=States,DC=ng,DC=ds,DC=army,DC=mil" | Select Name,Description,OperatingSystem,OperatingSystemServicePack,OperatingSystemVersion,IPV4Address
+﻿$ADComputerAssets = Get-ADComputer -Filter * -Property * -searchbase "OU=NGWI,OU=States,DC=ng,DC=ds,DC=army,DC=mil" | Select Name,Description,OperatingSystem,OperatingSystemServicePack,OperatingSystemVersion,IPV4Address
 $operatingSystems = $ADComputerAssests.OperatingSystem | Select-Object -Unique
 $operatingSystems += $null
 
