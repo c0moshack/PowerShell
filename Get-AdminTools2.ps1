@@ -1,4 +1,5 @@
-﻿$global:creds = Get-Credential "<domain\username>"
+﻿Import-Module showui
+$global:creds = Get-Credential "<domain\username>"
 Window -ShowInTaskbar -Content {
     Grid -Columns Auto,* -Rows Auto,* -Children {
 
