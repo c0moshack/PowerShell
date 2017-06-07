@@ -1,9 +1,20 @@
 ﻿Import-Module showui
 $global:creds = Get-Credential "<domain\username>"
-Window -ShowInTaskbar -Content {
-    Grid -Columns Auto,* -Rows Auto,* -Children {
 
-        StackPanel -Column 0 -Row 0 -RowSpan 2 -Margin 1 -Orientation Vertical -Background Red { 
+###########################################################
+#                   Custom Functions                      #
+###########################################################
+
+###########################################################
+#                  End Custom Funtions                    #
+###########################################################
+
+
+
+Window -ShowInTaskbar -Content {
+    Grid -Columns Auto,* -Rows Auto,Auto,* -Children {
+
+        StackPanel -Column 0 -Row 0 -RowSpan 3 -Margin 1 -Orientation Vertical -Background Red { 
             Label "Admin Tools"  -Foreground "white"
             Button "ADUC"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell -ArgumentList 'C:\WINDOWS\system32\dsa.msc' -Verb runas"}
             Button "DFS"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell -ArgumentList 'C:\WINDOWS\system32\dfsmgmt.msc' -Verb runas"}
@@ -28,14 +39,80 @@ Window -ShowInTaskbar -Content {
             Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ForeScout CounterACT\GuiManager\current\CounterACT Console.exe' -Verb runas"}
         }
 
-        StackPanel -Row 0 -Column 1 -Orientation Horizontal -Background "gray"{
+        StackPanel -Row 0 -Column 1 -Orientation Horizontal -Background "gray" -Height 30 {
             Label "Hostname" 
             TextBox -Name "hname" -Width 200
             Label "|" 
-            Button "HIPS Log"  -On_Click {(Get-ChildControl "tb").Text = $(Get-Content -Path "\\$((Get-ChildControl 'hname').Text)\c$\ConfigMgrAdminUISetup.log") | Out-String}
-            Button "System Details"  -On_Click {$COMPUTERNAME = (Get-ChildControl 'hname').Text; (Get-ChildControl "tb").Text = Start-Process powershell -Credential $global:creds -ArgumentList "-noprofile -command &{Start-Process powershell -ArgumentList 'Get-WMIObject -Class Win32_ComputerSystem -Computer $COMPUTERNAME -Verb runas'}" }
+            Button "System Details"  -On_Click {
+                $COMPUTERNAME = (Get-ChildControl 'hname').Text
+
+                $tempProperties = @{}
+                # Get AD Data
+                $ad = Get-ADComputer -Credential $global:creds -LDAPFilter "(name=$COMPUTERNAME)" -Properties *
+                $tempProperties.LastLogon = $ad.lastLogonDate
+                $tempProperties.CN = $ad.CanonicalName
+                $tempProperties.Created = $ad.Created
+                $tempProperties.Enabled = $ad.Enabled
+                $tempProperties.IP = $ad.IPv4Address
+
+                # Get WMI Data
+			    $bios = Get-WmiObject -Credential $global:creds -ComputerName $COMPUTERNAME -Class Win32_BIOS -ErrorAction SilentlyContinue
+			    $tempProperties.Manufacturer = $bios.Manufacturer
+			    $tempProperties.Serial = $bios.SerialNumber
+
+			    $compsys = Get-WmiObject -Credential $global:creds -ComputerName $COMPUTERNAME -Class Win32_ComputerSystem -ErrorAction SilentlyContinue
+			    $tempProperties.Model = $compsys.Model
+			    $tempProperties.Memory = [math]::truncate($($compsys.TotalPhysicalMemory / 1mb))
+			    $tempProperties.Name = $COMPUTERNAME
+                $tempProperties.NetBiosName = $compsys.Name
+
+                $ossys = Get-WmiObject -Credential $global:creds -ComputerName $COMPUTERNAME -Class Win32_OperatingSystem -ErrorAction SilentlyContinue
+			    $tempProperties.OS = $ossys.Caption
+
+                $tempProperties.BitLocker = $(Get-WmiObject -Credential $global:creds -Namespace root\CIMV2\Security\MicrosoftVolumeEncryption -Class Win32_EncryptableVolume -ComputerName $COMPUTERNAME -ErrorAction SilentlyContinue | Where-Object {$_.DriveLetter -eq "C:"}).ProtectionStatus 
+
+                # Get TPM Data
+			    $tpmdata = Get-WmiObject -Credential $global:creds -Namespace root\CIMV2\Security\MicrosoftTpm -Class Win32_Tpm -Property * -ComputerName $COMPUTERNAME -ErrorAction SilentlyContinue
+			    $tempProperties.TPMVersion = $tpmdata.PhysicalPresenceVersionInfo
+			    $tempProperties.TPMEnabled = $tpmdata.IsEnabled_InitialValue
+			    $tempProperties.TPMActivated = $tpmdata.IsActivated_InitialValue
+
+                $tempObject = New-Object -TypeName PSObject -Property $tempProperties
+
+                #(Get-ChildControl "tb").Text += $tempObject | Out-String
+                (Get-ChildControl "grid").ItemsSource = @($tempObject)
+
+            }
+            Button "Offer RA" -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Windows\System32\msra.exe' -ArgumentList '/offerra $COMPUTERNAME' -Verb runas"} 
+            Button "HIPS Log"  -On_Click {
+                New-PSDrive -Name "Host_$((Get-ChildControl 'hname').Text)" -PSProvider FileSystem -Root "\\$((Get-ChildControl 'hname').Text)\c$" -Credential $global:creds
+                (Get-ChildControl "tb").Text = $(Get-Content -Path "\\Host_$((Get-ChildControl 'hname').Text):\ConfigMgrAdminUISetup.log" ) | Out-String
+                Remove-PSDrive "Host_$((Get-ChildControl 'hname').Text)"
+            }
+
         }
         
-        TextBox -Name "tb" -Row 1 -Column 1 -TextWrapping Wrap -HorizontalScrollBarVisibility Auto -VerticalScrollBarVisibility Auto -Text ""
+        ListView -Row 1 -Column 1 -Name "grid" -Height 50 -View {
+            GridView -Columns {
+                #GridViewColumn -Header 'Name' DisplayMemberBinding 'Name'
+                GridViewColumn 'NetBiosName'
+                GridViewColumn 'Manufacturer'
+                GridViewColumn 'Model'
+                GridViewColumn 'Serial'
+                GridViewColumn 'OS'
+                GridViewColumn 'BitLocker'
+                GridViewColumn 'Memory'
+                GridViewColumn 'TPMVersion'
+                GridViewColumn 'TPMEnabled'
+                GridViewColumn 'TPMActivated'
+                GridViewColumn 'LastLogon'
+                GridViewColumn 'Created'
+                GridViewColumn 'Enabled'
+                GridViewColumn 'IP'
+                GirdViewColumn 'CN'
+            }
+        }
+        TextBox -Name "tb" -Row 2 -Column 1 -TextWrapping Wrap -HorizontalScrollBarVisibility Auto -VerticalScrollBarVisibility Auto -Text ""
+        
     }
 } -Show
