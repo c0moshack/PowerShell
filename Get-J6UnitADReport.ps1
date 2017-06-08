@@ -78,3 +78,5 @@
     
 
 }
+
+Get-J6UnitADReport -UIC "pyraa" | Export-Csv -NoTypeInformation C:\Users\paul.j.brown\Desktop\32IBCT_Computers_060717.csv

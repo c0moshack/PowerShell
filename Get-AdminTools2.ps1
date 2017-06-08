@@ -11,7 +11,7 @@ $global:creds = Get-Credential "<domain\username>"
 
 
 
-Window -ShowInTaskbar -Content {
+Window -ShowInTaskbar -Title "J6 Admin Tools" -Content {
     Grid -Columns Auto,* -Rows Auto,Auto,* -Children {
 
         StackPanel -Column 0 -Row 0 -RowSpan 3 -Margin 1 -Orientation Vertical -Background Red { 
@@ -83,13 +83,18 @@ Window -ShowInTaskbar -Content {
                 (Get-ChildControl "grid").ItemsSource = @($tempObject)
 
             }
-            Button "Offer RA" -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Windows\System32\msra.exe' -ArgumentList '/offerra $COMPUTERNAME' -Verb runas"} 
+            Button "Offer RA" -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'powershell' -ArgumentList 'C:\Windows\System32\msra.exe /offerra $COMPUTERNAME' -Verb runas"} 
             Button "HIPS Log"  -On_Click {
-                New-PSDrive -Name "Host_$((Get-ChildControl 'hname').Text)" -PSProvider FileSystem -Root "\\$((Get-ChildControl 'hname').Text)\c$" -Credential $global:creds
-                (Get-ChildControl "tb").Text = $(Get-Content -Path "\\Host_$((Get-ChildControl 'hname').Text):\ConfigMgrAdminUISetup.log" ) | Out-String
-                Remove-PSDrive "Host_$((Get-ChildControl 'hname').Text)"
+                $COMPUTERNAME = (Get-ChildControl 'hname').Text
+                New-PSDrive -Name "Host_$COMPUTERNAME" -PSProvider FileSystem -Root "\\$COMPUTERNAME\c$" -Credential $global:creds
+                (Get-ChildControl "tb").Text = $(Get-Content -Path "Host_$($COMPUTERNAME):\ProgramData\McAfee\Host Intrusion Prevention\HipShield.log" ) | Out-String
+                Remove-PSDrive "Host_$COMPUTERNAME"
             }
-
+            Button "Event Log" -On_Click {
+                $COMPUTERNAME = (Get-ChildControl 'hname').Text
+                $events = Invoke-Command -Credential $global:creds -ComputerName $COMPUTERNAME -ScriptBlock { get-eventlog -ComputerName ngwiwk-disc4-48 -LogName System -After $((Get-Date).AddHours(-1)) }
+                (Get-ChildControl "tb").Text = $events | Out-String
+            }
         }
         
         ListView -Row 1 -Column 1 -Name "grid" -Height 50 -View {
