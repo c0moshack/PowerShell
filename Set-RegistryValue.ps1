@@ -10,11 +10,19 @@
 Function Set-RegistryKey {
 	<# 
 	    .Synopsis 
-	   		This does that  
+	   		Edits the value of a given registry key 
 	   	.Example 
-	    	Example- 
+	    	Set-RegistryKey -Hive "LocalMachine" -Path "SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "AutoShareServer" -Value "1"
+        .Example
+            Set-RegistryKey -ComputerName "<computername>" -Hive "LocalMachine" -Path "SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "AutoShareServer" -Value "1"
 	    .Parameter  
-	    	The parameter 
+	    	Hive - The hive where the registry key is located
+        .Parameter
+            Path - Path to the registry item not including the item name
+        .Parameter
+            Name - Name of the item that you want to edit the value for
+        .Parameter
+            Value - Value of the registry key
 	    .Notes 
 	    	NAME: Untitled 
 	    	AUTHOR: paul.brown.sa 
@@ -57,7 +65,7 @@ Function Set-RegistryKey {
 	)
 
 	$reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey($Hive, $ComputerName)
-	$subkey = $reg.OpenSubKey($Path)
+	$subkey = $reg.OpenSubKey($Path, $true)
 	$keyvalue = $subkey.GetValue($Name)
 	
 	If ($Set) {
@@ -68,10 +76,3 @@ Function Set-RegistryKey {
 	
 	return "$subkey\$Name $keyvalue"
 }
-# 
-#$keys = "AutoShareServer", "AutoShareWks"
-# 
-#Foreach ($key in $keys) {
-#	#Set-RegistryKey -ComputerName "NGWINB-PYRAA-08" -Hive "LocalMachine" -Path "SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name $key
-#	Set-RegistryKey -Hive "LocalMachine" -Path "SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name $key
-#}
