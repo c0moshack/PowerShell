@@ -1,0 +1,1 @@
+﻿get-eventlog -log security | where-object {$_.EventID -match "^680$| ^528$|^672$|^4768$|^4776$" –AND $_.UserName -notmatch 'SYSTEM|NETWORK|SERVICE|LOCAL SERVICE|ANONYMOUS LOGON' –AND $_.TimeGenerated -gt [datetime]::today } | sort-object -property TimeGenerated | select-object -last 100 | Out-GridView

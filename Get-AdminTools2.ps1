@@ -37,6 +37,10 @@ Window -ShowInTaskbar -Title "J6 Admin Tools" -Content {
 
             Label "ForeScout"  -Foreground "white"
             Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ForeScout CounterACT\GuiManager\current\CounterACT Console.exe' -Verb runas"}
+
+            Label "Microsoft"  -Foreground "white"
+            Button "Hyper-V MGR"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Hyper-V Manager.lnk' -Verb runas"}
+
         }
 
         StackPanel -Row 0 -Column 1 -Orientation Horizontal -Background "gray" -Height 30 {
@@ -97,7 +101,7 @@ Window -ShowInTaskbar -Title "J6 Admin Tools" -Content {
             }
         }
         
-        ListView -Row 1 -Column 1 -Name "grid" -Height 50 -View {
+        ListView -Row 1 -Column 1 -Name "grid" -Height 100 -View {
             GridView -Columns {
                 #GridViewColumn -Header 'Name' DisplayMemberBinding 'Name'
                 GridViewColumn 'NetBiosName'

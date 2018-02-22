@@ -31,7 +31,7 @@
 		Position=0,
 		ValueFromPipeline=$true,
 		ValueFromPipelineByPropertyName=$true)]
-		[array]$Path,
+		[string]$Path,
         
         [Parameter(
 		Mandatory=$false)]
