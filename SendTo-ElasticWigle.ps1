@@ -36,7 +36,7 @@
         [Parameter(
 		Mandatory=$false,
 		Position=1)]
-		[string]$CSV = 'C:\Users\Paul\Desktop\elasticcsv\wiglenew.csv',
+		[string]$CSV = 'C:\Users\Paul\Documents\__From Desktop\elasticcsv\wiglenew.csv',
 
         [Parameter(
 		Mandatory=$false,
@@ -46,7 +46,7 @@
         [Parameter(
 		Mandatory=$false,
 		Position=2)]
-		[string]$Out = "C:\Users\Paul\Desktop\elasticcsv\test.json"
+		[string]$Out = "C:\Users\Paul\Documents\__From Desktop\elasticcsv\test.json"
 
 	)
     begin {
@@ -81,7 +81,7 @@
 
             $node = [pscustomobject]@{
                 "mac" = $line.MAC;
-                "sid" = $line.SSID;
+                "ssid" = $line.SSID;
                 "authmode" = $line.AuthMode;
                 "firstseen" = $line.FirstSeen;
                 "channel" = $line.Channel;

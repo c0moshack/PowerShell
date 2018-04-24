@@ -36,7 +36,7 @@
         [Parameter(
 		Mandatory=$false,
 		Position=1)]
-		[string]$CSV = "C:\Users\Paul\Downloads\2016-17_school_reportcard_data.csv",
+		[string]$CSV = "C:\Developer1\SchoolReportCardData\2016-17_school_reportcard_data_Normalized.csv",
 
         [Parameter(
 		Mandatory=$false,
@@ -46,7 +46,7 @@
         [Parameter(
 		Mandatory=$false,
 		Position=2)]
-		[string]$Out = "C:\Users\Paul\Downloads\2016-17_school_reportcard_data.json",
+		[string]$Out = "C:\Developer1\SchoolReportCardData\2016-17_school_reportcard_data_Normalized.json",
 
         [Parameter(
         Mandatory=$false,
@@ -138,12 +138,16 @@
                     $stype = $systemtype.Name
                 }
 
+                
                 # determine the item type
                 $itemtype = Read-Host "Please enter type of text, keyword, float, or integer for the following data.`nDefault is in brackets.`n`nName: $h`nValue:  '$($csvdata[0].$h)'`n[$stype]"
-
+                
+                if ( $itemtype.Length > 2 ) {
+                    $stype = $itemtype
+                }
 
                 $ttype = [pscustomobject]@{
-                    type = $itemtype
+                    type = $stype
                 }
                 $properties.Add($h, $ttype)
             }
@@ -161,15 +165,16 @@
             }
 
             $templatedoc = [pscustomobject]@{
-                index_patterns = "[$TemplateName-$(Get-Date -Format 'yyyy.MM.dd')]";
+                index_patterns = "[$TemplateName-*]";
                 settings = $tshards;
                 mappings = $tdoc
             }
 
-            $templatedoccompressed = $templatedoc | ConvertTo-Json -Depth 10 -Compress
+            $templatedoccompressed = $templatedoc | ConvertTo-Json -Depth 10 #-Compress
             Try {
                 #Invoke-RestMethod -Method Post -Uri "$ESURI/_template/$TemplateName" -ContentType 'application/json' -Body $templatedoccompressed -ErrorAction Stop | Out-Null
-                $templatedoc | ConvertTo-Json -Depth 10 -Compress | Out-File "C:\Users\Paul\Downloads\2016-17_school_reportcard_data_template.json"
+                #$templatedoc | ConvertTo-Json -Depth 10 -Compress | Out-File "C:\Users\Paul\Downloads\2016-17_school_reportcard_data_template.json"
+                #$templatedoc | ConvertTo-Json -Depth 10 | Out-File "C:\Users\Paul\Downloads\2016-17_school_reportcard_data_template.json"
             } Catch {
                 $_.Exception.Message
             }
@@ -184,4 +189,5 @@
 
 }
 
-SendTo-Elasticsearch -Template
+SendTo-Elasticsearch
+#SendTo-Elasticsearch -Template
