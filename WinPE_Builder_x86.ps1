@@ -1,4 +1,4 @@
-﻿Import-Module D:\Documents\J6\Programming\Powershell\WinPE_Builder_x86.psm1
+﻿Import-Module "C:\Users\paul.j.brown\Documents\Git\PowerShell\WinPE_Builder_x86.psm1"
 Import-Module DISM
 
 WinPE-Cleanup
