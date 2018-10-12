@@ -1,5 +1,5 @@
 ﻿$hosts = @()
-$hosts +=  1..154 | %{"55.94.250.$_"}
+$hosts +=  1..154 | %{"192.168.1.$_"}
 $pinger = New-Object System.Net.NetworkInformation.Ping
   
 $hosts |

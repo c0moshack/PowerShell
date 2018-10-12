@@ -22,7 +22,7 @@ Window -ShowInTaskbar -Title "J6 Admin Tools" -Content {
             Button "GPMC"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell -ArgumentList 'C:\WINDOWS\system32\gpmc.msc' -Verb runas"}
         
             Label "SCCM Tools"  -Foreground "white"
-            Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\SCCM\AdminConsole\bin\Microsoft.ConfigurationManagement.exe' -Verb runas"}
+            Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft System Center\Configuration Manager\Configuration Manager Console.lnk' -Verb runas"}
             Button "Remote Viewer"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\SCCM\AdminConsole\bin\i386\CmRcViewer.exe' -Verb runas"}
             Button "DP Job Viewer"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ConfigMgr 2012 Toolkit R2\ServerTools\DPJobMgr.exe' -Verb runas"}
             Button "Content Library Explorer"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ConfigMgr 2012 Toolkit R2\ServerTools\ContentLibraryExplorer.exe' -Verb runas"}
@@ -32,8 +32,8 @@ Window -ShowInTaskbar -Title "J6 Admin Tools" -Content {
             Button "Wakeup Spy"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ConfigMgr 2012 Toolkit R2\ClientTools\WakeupSpy.exe' -Verb runas"}
 
             Label "PowerShell"  -Foreground "white"
-            Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell.exe -Verb runas"}
-            Button "ISE"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell_ise.exe -Verb runas"}
+            Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell.exe -Verb runas" -WorkingDirectory $env:windir}
+            Button "ISE"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process powershell_ise.exe -Verb runas" -WorkingDirectory $env:windir}
 
             Label "ForeScout"  -Foreground "white"
             Button "Console"  -On_Click {Start-Process powershell -Credential $global:creds -ArgumentList "Start-Process 'C:\Program Files (x86)\ForeScout CounterACT\GuiManager\current\CounterACT Console.exe' -Verb runas"}
