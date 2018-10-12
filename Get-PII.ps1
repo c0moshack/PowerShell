@@ -1,1 +1,0 @@
-﻿Get-ChildItem -Path "E:\WOBC" -Recurse -Force -Include *.doc, *.docx, *.xls, *.xlsx, *.txt, *.pdf, *.ppt, *.pptx | Select-String "[0-9]{3}[-| ][0-9]{2}[-| ][0-9]{4}" | Select-Object Path, Line, LineNumber | Export-Csv "E:\pii.csv" -Append

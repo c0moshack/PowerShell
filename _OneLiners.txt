@@ -1,1 +1,0 @@
-Get-VM | Select Name,PowerState,Guest,NumCpu,CoresPerSocket,MemoryGB,VMHost,Version,UsedSpaceGB,ProvisionedSpaceGB | Export-Csv -NoTypeInformation C:\Users\paul.j.brown\Desktop\VMInventory1.xlsx

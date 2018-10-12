@@ -1,1 +1,0 @@
-﻿Get-ChildItem \\ngwia7-disc4-20\E\MDTShare\ | Unblock-File
